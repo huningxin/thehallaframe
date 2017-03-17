@@ -340,10 +340,8 @@
       var scene = document.querySelector('a-scene');
       function checkAndEnterVR() {
         if (!scene.hasLoaded || !scene.effect || scene.effect.getVRDisplay() === undefined) {
-          console.log('check');
           setTimeout(checkAndEnterVR, 500);
         } else {
-          console.log('enter');
           scene.enterVR();
         }
       }
